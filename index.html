@@ -3,25 +3,74 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Página Principal del ejercicio S1.03 de Pietro D'Agostino.">
     <title>S1.03 - Pietro D'Agostino</title>
-    <link rel="stylesheet" href=".src/csss/style.css">
+    <link rel="icon" type="image/png" href="src/assets/icons/atom-white.png">
+    <link rel="stylesheet" href="src/css/style.css">
   </head>
   <body>
-    <div class="login">
-      <form class="login-form">
-
-      </form>
-    </div>
     <header class="site-header">
-      <!--Cabecera-->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="container" aria-label="Página Principal de Pietro D'Agostino">
-      <!--Contenido principal-->
+    <main class="container" aria-label="Página Principal del ejercicio S1.03 de Pietro D'Agostino">
+      <section class="hero">
+        <h1 class="hero-title">A brand and product designer working with clients globally</h1>
+      
+        <div class="categories-nav">
+          <nav aria-label="Categories Navigation">
+            <ul class="categories-nav-list">
+              <li><a href="#" aria-current="page">Expertise</a></li>
+              <li><a href="#">Branding</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Design System</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="Image Gallery"> 
+          <img class="image" src="src/assets/img/img1.png" alt="First Image">
+          <img class="image" src="src/assets/img/img2.png" alt="Second Image">
+          <img class="image" src="src/assets/img/img3.png" alt="Third Image">
+          <img class="image" src="src/assets/img/img4.png" alt="Fourth Image">
+          <img class="image" src="src/assets/img/img5.png" alt="Fifth Image">
+          <img class="image" src="src/assets/img/img6.png" alt="Sixth Image">       
+      </section>
+
+      <section class="cta">
+        <p class="cta-line">Let's work together.</p>
+        <p class="cta-line grey">Get in touch</p>
+
+        <div class="newsletter">
+          <form class="newsletter-form">
+            <input class="input-area" type="text" id="username" aria-label="Name" placeholder="Your name">
+            <input class="input-area" type="email" id="user-email" aria-label="Email" placeholder="Your email">
+            <button class="submit-button" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      
+      <footer class="site-footer">
+        <p class="brand">
+          <img class="logo" src="src/assets/icons/atom.png">
+          © Pietro D'Agostino 2026
+        </p>
+        <ul class="footer-links">
+          <li><a href="https://twitter.com">Twitter</a></li>
+          <li><a href="https://linkedin.com">Linkedin</a></li>
+          <li><a href="mailto:piotere3@gmail.com">Mail</a></li>
+        </ul>
+      </footer>
+      
     </main>
 
-    <footer class="site-footer">
-      <!--Pie de página-->
-    </footer>
+    
   </body>
 </html>

@@ -1,3 +1,203 @@
-/*
-    Aquí va tu código CSS
-*/
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-text: #111111;
+    --color-secondary-text: #7f7f7f;
+    --color-bg: #ffffff;
+    --color-pill: #e8e5e480;
+    --font: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    --max-width: 120rem;
+    --padding: clamp(2rem, 4vw, 4rem);
+    --pill-radius: 9999px;
+}
+
+a:focus-visible, 
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-text)
+}
+
+body {
+    font-family: var(--font);
+    font-size: 1.3rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    background-color: var(--color-bg);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--padding)
+}
+
+.site-header {
+    display: flex;
+    justify-content: center;
+    padding: 3rem var(--padding)
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    border: 1px solid var(--color-pill);
+    border-radius: var(--pill-radius);
+    padding: 0.3rem;
+    background-color: var(--color-pill);
+}
+
+.nav-list a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 0.9rem 2.8rem;
+    border-radius: var(--pill-radius);
+}
+
+.nav-list a[aria-current="page"] {
+    background-color: var(--color-bg);
+}
+
+.hero {
+    text-align: center;
+    padding: clamp(8rem, 10vw, 12rem) clamp(3rem, 6vw, 6.4rem);
+}
+
+.hero-title {
+    max-width: 21ch;
+    font-size: clamp(4rem, 8vw, 7.2rem);
+    margin-inline: auto;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.0rem;
+}
+
+.categories-nav {
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    
+}
+
+.categories-nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+.categories-nav-list a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-pill);
+    border-radius: var(--pill-radius);
+    padding: 0.4rem 1.2rem;
+}
+
+.categories-nav-list a[aria-current="page"] {
+    background-color: var(--color-bg);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+}
+
+.image {
+    display: block;        
+    width: 100%;         
+    height: 100%;          
+    aspect-ratio: 4 / 3;  
+    object-fit: cover;     
+    border-radius: 1rem;
+}
+
+.cta {
+    text-align: center;
+    padding: clamp(8rem, 10vw, 12rem) clamp(3rem, 6vw, 6.4rem);
+}
+
+.cta-line {
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.grey {
+    color: var(--color-secondary-text);
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    padding: 6rem;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items:center;
+    gap: 0.5rem;
+}
+
+.input-area {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-pill);
+    border-radius: var(--pill-radius);
+}
+
+.submit-button {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-pill);
+    border-radius: var(--pill-radius);
+    background-color: var(--color-pill);
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(1rem, 7vw, 3rem);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+    gap: 1.3rem;   
+}
+
+.footer-links a {
+    text-decoration: none;
+    color:  var(--color-text);
+}
+
+@media (min-width: 37.5em) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
