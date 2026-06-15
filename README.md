@@ -1,7 +1,5 @@
 # Adaptive & Accessible Portfolio Layout — Vanilla Implementation
 
-> Rename this title if you prefer (e.g. with your repo name).
-
 ## Description
 
 A responsive, accessible portfolio landing page for a brand and product designer,
